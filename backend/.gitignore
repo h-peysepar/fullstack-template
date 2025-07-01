@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Coverage directory
+coverage/
+
+# Debugger files
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Optional npm cache
+.npm
+
+# Nest CLI artifacts
+.nest/
+
+# Misc
+*.tsbuildinfo

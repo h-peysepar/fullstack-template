@@ -1,0 +1,46 @@
+
+model User {
+  id              String   @id @default(uuid())
+  email           String?  @unique
+  phone           String?  @unique
+  passwordHash    String
+  displayName     String
+  shareByEmail    Boolean  @default(false)
+  shareByPhone    Boolean  @default(false)
+  customShareId   String   @unique @default(cuid()) // for sharing via link
+  wishes          Wish[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+
+model Wish {
+  id          String       @id @default(uuid())
+  user        User         @relation(fields: [userId], references: [id])
+  userId      String
+  title       String
+  imageUrl    String?      
+  visibility  Visibility    @default(PUBLIC)
+  isFulfilled Boolean       @default(false)
+  links       WishLink[]
+  markedBy    User?        @relation("WishMarkedBy", fields: [markedById], references: [id])
+  markedById  String?     
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model WishLink {
+  id       String   @id @default(uuid())
+  wish     Wish     @relation(fields: [wishId], references: [id])
+  wishId   String
+  title    String
+  url      String
+  createdAt DateTime @default(now())
+}
+
+enum Visibility {
+  PUBLIC
+  FRIENDS_ONLY
+  PRIVATE
+}
+

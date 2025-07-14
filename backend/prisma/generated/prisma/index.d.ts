@@ -1037,7 +1037,7 @@ export namespace Prisma {
     email: string | null
     phone: string | null
     passwordHash: string
-    displayName: string
+    displayName: string | null
     shareByEmail: boolean
     shareByPhone: boolean
     customShareId: string
@@ -1124,7 +1124,7 @@ export namespace Prisma {
       email: string | null
       phone: string | null
       passwordHash: string
-      displayName: string
+      displayName: string | null
       shareByEmail: boolean
       shareByPhone: boolean
       customShareId: string
@@ -2048,7 +2048,7 @@ export namespace Prisma {
     email?: StringNullableFilter<"User"> | string | null
     phone?: StringNullableFilter<"User"> | string | null
     passwordHash?: StringFilter<"User"> | string
-    displayName?: StringFilter<"User"> | string
+    displayName?: StringNullableFilter<"User"> | string | null
     shareByEmail?: BoolFilter<"User"> | boolean
     shareByPhone?: BoolFilter<"User"> | boolean
     customShareId?: StringFilter<"User"> | string
@@ -2061,7 +2061,7 @@ export namespace Prisma {
     email?: SortOrderInput | SortOrder
     phone?: SortOrderInput | SortOrder
     passwordHash?: SortOrder
-    displayName?: SortOrder
+    displayName?: SortOrderInput | SortOrder
     shareByEmail?: SortOrder
     shareByPhone?: SortOrder
     customShareId?: SortOrder
@@ -2078,7 +2078,7 @@ export namespace Prisma {
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
     passwordHash?: StringFilter<"User"> | string
-    displayName?: StringFilter<"User"> | string
+    displayName?: StringNullableFilter<"User"> | string | null
     shareByEmail?: BoolFilter<"User"> | boolean
     shareByPhone?: BoolFilter<"User"> | boolean
     createdAt?: DateTimeFilter<"User"> | Date | string
@@ -2090,7 +2090,7 @@ export namespace Prisma {
     email?: SortOrderInput | SortOrder
     phone?: SortOrderInput | SortOrder
     passwordHash?: SortOrder
-    displayName?: SortOrder
+    displayName?: SortOrderInput | SortOrder
     shareByEmail?: SortOrder
     shareByPhone?: SortOrder
     customShareId?: SortOrder
@@ -2109,7 +2109,7 @@ export namespace Prisma {
     email?: StringNullableWithAggregatesFilter<"User"> | string | null
     phone?: StringNullableWithAggregatesFilter<"User"> | string | null
     passwordHash?: StringWithAggregatesFilter<"User"> | string
-    displayName?: StringWithAggregatesFilter<"User"> | string
+    displayName?: StringNullableWithAggregatesFilter<"User"> | string | null
     shareByEmail?: BoolWithAggregatesFilter<"User"> | boolean
     shareByPhone?: BoolWithAggregatesFilter<"User"> | boolean
     customShareId?: StringWithAggregatesFilter<"User"> | string
@@ -2122,7 +2122,7 @@ export namespace Prisma {
     email?: string | null
     phone?: string | null
     passwordHash: string
-    displayName: string
+    displayName?: string | null
     shareByEmail?: boolean
     shareByPhone?: boolean
     customShareId?: string
@@ -2135,7 +2135,7 @@ export namespace Prisma {
     email?: string | null
     phone?: string | null
     passwordHash: string
-    displayName: string
+    displayName?: string | null
     shareByEmail?: boolean
     shareByPhone?: boolean
     customShareId?: string
@@ -2148,7 +2148,7 @@ export namespace Prisma {
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     passwordHash?: StringFieldUpdateOperationsInput | string
-    displayName?: StringFieldUpdateOperationsInput | string
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
     shareByEmail?: BoolFieldUpdateOperationsInput | boolean
     shareByPhone?: BoolFieldUpdateOperationsInput | boolean
     customShareId?: StringFieldUpdateOperationsInput | string
@@ -2161,7 +2161,7 @@ export namespace Prisma {
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     passwordHash?: StringFieldUpdateOperationsInput | string
-    displayName?: StringFieldUpdateOperationsInput | string
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
     shareByEmail?: BoolFieldUpdateOperationsInput | boolean
     shareByPhone?: BoolFieldUpdateOperationsInput | boolean
     customShareId?: StringFieldUpdateOperationsInput | string
@@ -2174,7 +2174,7 @@ export namespace Prisma {
     email?: string | null
     phone?: string | null
     passwordHash: string
-    displayName: string
+    displayName?: string | null
     shareByEmail?: boolean
     shareByPhone?: boolean
     customShareId?: string
@@ -2187,7 +2187,7 @@ export namespace Prisma {
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     passwordHash?: StringFieldUpdateOperationsInput | string
-    displayName?: StringFieldUpdateOperationsInput | string
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
     shareByEmail?: BoolFieldUpdateOperationsInput | boolean
     shareByPhone?: BoolFieldUpdateOperationsInput | boolean
     customShareId?: StringFieldUpdateOperationsInput | string
@@ -2200,7 +2200,7 @@ export namespace Prisma {
     email?: NullableStringFieldUpdateOperationsInput | string | null
     phone?: NullableStringFieldUpdateOperationsInput | string | null
     passwordHash?: StringFieldUpdateOperationsInput | string
-    displayName?: StringFieldUpdateOperationsInput | string
+    displayName?: NullableStringFieldUpdateOperationsInput | string | null
     shareByEmail?: BoolFieldUpdateOperationsInput | boolean
     shareByPhone?: BoolFieldUpdateOperationsInput | boolean
     customShareId?: StringFieldUpdateOperationsInput | string

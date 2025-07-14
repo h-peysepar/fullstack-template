@@ -8,13 +8,13 @@ import { JwtService } from '@nestjs/jwt';
 export class AuthService {
   constructor(private postgresService: PostgresService, private jwt: JwtService) {}
 
-  async signup(data: { phone: string; password: string; displayName: string }) {
+  async signup(data: { phone: string; password: string; }) {
     const hash = await bcrypt.hash(data.password, 10);
     const user = await this.postgresService.user.create({
       data: {
         phone: data.phone,
         passwordHash: hash,
-        displayName: data.displayName,
+        // displayName: data.displayName,
       },
     });
     return this.jwt.sign({ sub: user.id });

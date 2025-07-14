@@ -7,6 +7,6 @@ export class SignupDto {
   @IsString()
   password: string;
 
-  @IsString()
-  displayName: string;
+  // @IsString()
+  // displayName: string;
 }

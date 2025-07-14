@@ -13,7 +13,7 @@ model User {
   email         String?  @unique
   phone         String?  @unique
   passwordHash  String
-  displayName   String
+  displayName   String?
   shareByEmail  Boolean  @default(false)
   shareByPhone  Boolean  @default(false)
   customShareId String   @unique @default(cuid())

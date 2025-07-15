@@ -39,3 +39,6 @@ temp/
 
 # Misc
 *.tsbuildinfo
+
+# prisma
+prisma/generated/
